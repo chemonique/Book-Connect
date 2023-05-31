@@ -31,7 +31,7 @@ dataListItems.addEventListener('click',(event)=>{
   let pathArray = Array.from(event.path || event.composedPath());
   let active;
   
-  for (node of pathArray){
+  for (const node of pathArray){
     if (active) break;
     const previewId = node?.dataset?.preview
 
@@ -46,7 +46,8 @@ dataListItems.addEventListener('click',(event)=>{
   dataListImage.src = active.image;
   dataListBlur.src = active.image;
   dataListTitle.textContent = active.title;
-  dataListSubTitle.textContent = `${authors[active.author]} (${new Date(active.published).year})`;
+  const date = active.published.slice(0,4)
+  dataListSubTitle.textContent = `${authors[active.author]} (${date})`;
   dataListDescription.textContent = active.description;
 
 })
@@ -132,7 +133,6 @@ const dataSearchCancel= document.querySelector('[data-search-cancel]')
 dataSearchHeader.addEventListener('click',()=>{
   dataSearchOverlay.showModal();
   dataSearchTitle.focus();
-
 })
 
 const genresFragment = document.createDocumentFragment();
@@ -185,6 +185,46 @@ dataSearchForm.addEventListener('submit', (event) => {
     if (titleMatch || authorMatch || genreMatch) {
         result.push(book)
     }
+}
+
+let page = 1;
+if (result.length === 0   ){
+  dataListItems.innerHTML = '';
+  dataListButton.disabled=true;
+  dataListMessage.classList.add('list__message_show');
+
+  const remainingBooksCount = result.length - (page * BOOKS_PER_PAGE);
+  dataListButton.innerHTML = /* html */ `
+    <span>Show more</span>
+    <span class="list__remaining"> (${remainingBooksCount > 0 ? remainingBooksCount: 0})</span>
+  `;
+}else {
+  dataListMessage.classList.remove('list__message_show')
+  dataListItems.innerHTML = '';
+
+  
+  const searchStartIdx = (page-1) * BOOKS_PER_PAGE;
+  const searchEndIdx = searchStartIdx + BOOKS_PER_PAGE;
+  
+  const searchBookFragment = document.createDocumentFragment();
+
+  const searchBookExtracted= result.slice(searchStartIdx,searchEndIdx);
+
+  for (const preview of searchBookExtracted){
+    const showPreview = createPreview(preview);
+    searchBookFragment.appendChild(showPreview)
+  }
+
+  dataListItems.appendChild(searchBookFragment)
+
+  const remainingBooksCount = result.length - (page * BOOKS_PER_PAGE);
+
+  dataListButton.innerHTML = /* html */ `
+    <span>Show more</span>
+    <span class="list__remaining"> (${remainingBooksCount > 0 ? remainingBooksCount: 0})</span>
+  `;
+  
+  dataListButton.disabled = remainingBooksCount <= 0 ;
 }
 
 window.scrollTo({ top: 0, behavior: 'smooth' });
