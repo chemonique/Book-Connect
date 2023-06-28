@@ -76,6 +76,15 @@ function createPreview(preview){
   `
   return showPreview
 }
+/**
+ * display the number of remaining books that can still be shown to the user 
+ */
+function createRemainingText(){
+    dataListButton.innerHTML = /* html */ `
+    <span>Show more</span>
+    <span class="list__remaining"> (${remainingBooksCount > 0 ? remainingBooksCount: 0})</span>
+  `;
+}
 
 const startIdx = (page - 1) * BOOKS_PER_PAGE;
 const endIdx = startIdx + BOOKS_PER_PAGE;
@@ -112,10 +121,7 @@ dataListButton.addEventListener('click',()=>{
 
   const remainingBooksCount = matches.length - (page * BOOKS_PER_PAGE);
 
-  dataListButton.innerHTML = /* html */ `
-    <span>Show more</span>
-    <span class="list__remaining"> (${remainingBooksCount > 0 ? remainingBooksCount: 0})</span>
-  `;
+  createRemainingText();
   
   dataListButton.disabled = remainingBooksCount <= 0 ;
 })
@@ -194,10 +200,8 @@ if (result.length === 0   ){
   dataListMessage.classList.add('list__message_show');
 
   const remainingBooksCount = result.length - (page * BOOKS_PER_PAGE);
-  dataListButton.innerHTML = /* html */ `
-    <span>Show more</span>
-    <span class="list__remaining"> (${remainingBooksCount > 0 ? remainingBooksCount: 0})</span>
-  `;
+  createRemainingText();
+
 }else {
   dataListMessage.classList.remove('list__message_show')
   dataListItems.innerHTML = '';
@@ -219,10 +223,7 @@ if (result.length === 0   ){
 
   const remainingBooksCount = result.length - (page * BOOKS_PER_PAGE);
 
-  dataListButton.innerHTML = /* html */ `
-    <span>Show more</span>
-    <span class="list__remaining"> (${remainingBooksCount > 0 ? remainingBooksCount: 0})</span>
-  `;
+  createRemainingText();
   
   dataListButton.disabled = remainingBooksCount <= 0 ;
 }
