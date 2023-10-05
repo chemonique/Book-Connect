@@ -14,14 +14,14 @@ Slide Presentation: After spending a week working on the code, compile your reco
 ## User Stories
 To ensure the project meets the client's expectations, I focused on fulfilling these prioritized user stories:
 
-As a user, I want to view a list of book previews by title and author so that I can discover new books to read.
-As a user, I want an image associated with all book previews so that I can recognize a book by the cover even if I forgot the name.
-As a user, I want to have the option of reading a summary of the book so that I can decide whether I want to read it.
-As a user, I want to have the option of seeing the date that a book was published so that I can determine how easy it is to obtain second-hand.
-As a user, I want to find books based on specific text phrases so that I don't need to remember the entire title of a book.
-As a user, I want to filter books by author so that I can find books to read by authors that I enjoy.
-As a user, I want to filter books by genre so that I can find books to read in genres that I enjoy.
-As a user, I want to toggle between dark and light modes so that I can use the app comfortably at night.
+- As a user, I want to view a list of book previews by title and author so that I can discover new books to read.
+- As a user, I want an image associated with all book previews so that I can recognize a book by the cover even if I forgot the name.
+- As a user, I want to have the option of reading a summary of the book so that I can decide whether I want to read it.
+- As a user, I want to have the option of seeing the date that a book was published so that I can determine how easy it is to obtain second-hand.
+- As a user, I want to find books based on specific text phrases so that I don't need to remember the entire title of a book.
+- As a user, I want to filter books by author so that I can find books to read by authors that I enjoy.
+- As a user, I want to filter books by genre so that I can find books to read in genres that I enjoy.
+- As a user, I want to toggle between dark and light modes so that I can use the app comfortably at night.
 
 ## Technology Stack
 In the Book Connect project, a combination of technologies has been used to create a functional and engaging social media platform for book enthusiasts. Here's an overview of the technologies that comprise the project's tech stack:
@@ -33,26 +33,26 @@ Purpose: HTML structures the web page content, while CSS styles and enhances the
 
 #### JavaScript:
 
-Description: JavaScript is a versatile, high-level programming language used for adding interactivity and dynamic behavior to web applications. In the Book Connect project, JavaScript plays a central role in managing user interactions, data retrieval, and overall application functionality.
-Purpose: JavaScript enables the implementation of features such as book previews, filtering, searching, and toggling between dark and light modes.
+- Description: JavaScript is a versatile, high-level programming language used for adding interactivity and dynamic behavior to web applications. In the Book Connect project, JavaScript plays a central role in managing user interactions, data retrieval, and overall application functionality.
+- Purpose: JavaScript enables the implementation of features such as book previews, filtering, searching, and toggling between dark and light modes.
 
 #### GitHub:
 
-Description: GitHub is a web-based platform for version control and collaboration. It allows developers to work together on projects, track changes, and manage code repositories.
-Purpose: GitHub is the central repository where the project's codebase is hosted, making it accessible for collaborative development, code review, and version tracking.
+- Description: GitHub is a web-based platform for version control and collaboration. It allows developers to work together on projects, track changes, and manage code repositories.
+- Purpose: GitHub is the central repository where the project's codebase is hosted, making it accessible for collaborative development, code review, and version tracking.
 
 #### Node.js:
 
-Description: Node.js is a JavaScript runtime environment that allows server-side scripting. It enables running JavaScript code outside the web browser, making it suitable for building server-side applications.
-Purpose: Node.js may be used in the project for server-side tasks, data processing, and facilitating communication between the front-end and back-end.
+- Description: Node.js is a JavaScript runtime environment that allows server-side scripting. It enables running JavaScript code outside the web browser, making it suitable for building server-side applications.
+- Purpose: Node.js may be used in the project for server-side tasks, data processing, and facilitating communication between the front-end and back-end.
 
 #### External APIs:
 
-Description: External Application Programming Interfaces (APIs) are used to fetch data and content from external sources. These APIs provide access to information such as book details, covers, summaries, and publication dates.
-Purpose: External APIs enhance the application's functionality by providing real-time book data, ensuring users have access to up-to-date information.
+- Description: External Application Programming Interfaces (APIs) are used to fetch data and content from external sources. These APIs provide access to information such as book details, covers, summaries, and publication dates.
+- Purpose: External APIs enhance the application's functionality by providing real-time book data, ensuring users have access to up-to-date information.
 
 #### Slide Presentation Software:
 
-Description: Slide presentation software such as Microsoft PowerPoint or Google Slides is used to create and present the recommendations and findings from the code review.
-Purpose: Slide presentation software helps you organize and communicate your assessment of the codebase effectively to the development team.
+- Description: Slide presentation software such as Microsoft PowerPoint or Google Slides is used to create and present the recommendations and findings from the code review.
+- Purpose: Slide presentation software helps you organize and communicate your assessment of the codebase effectively to the development team.
 The combination of these technologies allows Book Connect to provide book enthusiasts with an interactive and visually appealing platform for discovering, filtering, and exploring books. 
