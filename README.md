@@ -55,4 +55,7 @@ Purpose: HTML structures the web page content, while CSS styles and enhances the
 
 - Description: Slide presentation software such as Microsoft PowerPoint or Google Slides is used to create and present the recommendations and findings from the code review.
 - Purpose: Slide presentation software helps you organize and communicate your assessment of the codebase effectively to the development team.
-The combination of these technologies allows Book Connect to provide book enthusiasts with an interactive and visually appealing platform for discovering, filtering, and exploring books. 
+- 
+The combination of these technologies allows Book Connect to provide book enthusiasts with an interactive and visually appealing platform for discovering, filtering, and exploring books.
+
+![IWA_19-1](https://github.com/chemonique/Book-Connect/assets/122254404/4d1b52b3-4a45-4387-810c-e2d2e653bd58)
